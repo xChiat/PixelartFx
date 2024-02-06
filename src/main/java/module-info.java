@@ -2,6 +2,8 @@ module yosolito.pixelartfx {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
+    requires java.desktop;
+    requires javafx.swing;
 
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
@@ -10,7 +12,12 @@ module yosolito.pixelartfx {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires javafx.graphics;
+    requires javafx.media;
 
-    opens yosolito.pixelartfx to javafx.fxml;
-    exports yosolito.pixelartfx;
+    opens colorearPixelArt to javafx.graphics;
+    opens TragaPerras to javafx.graphics;
+    opens ConversorMorse to javafx.graphics;
+
+    exports colorearPixelArt;
 }
