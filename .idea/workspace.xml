@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e55541cf-97ae-44f9-bff0-c6e7c6f8ca9e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ConversorMorse/EscenaConversor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ConversorMorse/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/TragaPerras/EscenaTragaperras.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/TragaPerras/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/colorearPixelArt/CuadradoColorear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/colorearPixelArt/CuadradoColorear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/colorearPixelArt/EscenaPixelArt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/colorearPixelArt/EscenaPixelArt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/colorearPixelArt/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/colorearPixelArt/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/colorearPixelArt/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/colorearPixelArt/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConversorMorse/EscenaConversor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConversorMorse/EscenaConversor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ConversorMorse/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ConversorMorse/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
