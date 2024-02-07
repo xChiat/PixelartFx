@@ -12,6 +12,7 @@ import javafx.scene.layout.VBox;
 import java.util.HashMap;
 
 public class EscenaConversor extends Scene {
+    // atributos
     private VBox principal;
     private Label conversor, textoResultante;
     private HBox panel,panelResult;
@@ -30,17 +31,18 @@ public class EscenaConversor extends Scene {
         texto = new TextField("Escriba El texto que desea convertir");
         texto.setMaxSize(300,25);
         texto.setMinSize(300,25);
-        texto.setStyle("-fx-border-color: black; -fx-font-family: serif; -fx-font-size: large; -fx-border-width: 1px");
+        texto.setStyle("-fx-border-color: black; -fx-font-family: serif; -fx-font-size: large; -fx-border-width: 1px");// establecemos estilos
 
         montarEscena();
     }
 
     private void montarEscena() {
+        //preparamos los elementos de la escena
         panel.getChildren().addAll(btnConvertir,texto);
         panel.setAlignment(Pos.CENTER);
         panelResult.getChildren().add(textoResultante);
         panelResult.setAlignment(Pos.BOTTOM_CENTER);
-        btnConvertir.setOnAction(e->convertirTexto());
+        btnConvertir.setOnAction(e->convertirTexto());// agregamos la funcionalidad del boton
         principal.getChildren().addAll(panel,panelResult);
         principal.setAlignment(Pos.CENTER);
     }
@@ -113,8 +115,8 @@ public class EscenaConversor extends Scene {
         String resultadoTexto = textoResult.toString().trim();
 
         boolean esMrs = resultadoTexto.isEmpty();
-        System.out.println(esMrs);
 
+        //cambiamos el label dependiendo del resultado
         if (esMrs) {
             textoResultante.setText("Texto resultante: " + resultadoMorse);
         } else {
