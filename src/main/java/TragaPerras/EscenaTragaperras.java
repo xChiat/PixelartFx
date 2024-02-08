@@ -17,6 +17,8 @@ public class EscenaTragaperras extends Scene {
     private MenuItem iSalir;
 
     // Atributos Zona Central.
+    private HBox panelCasillas;
+    private Casillas izquierda,centro,derecha;
     // Atributos zona inferior.
     private HBox panelInferior;
     private Label infoDinero, dineroActual,infoApuesta;
@@ -29,6 +31,11 @@ public class EscenaTragaperras extends Scene {
         barra = new MenuBar();
         mJuego = new Menu("Juego");
         iSalir = new MenuItem("Salir");
+
+        panelCasillas = new HBox(15);
+        izquierda = new Casillas();
+        derecha = new Casillas();
+        centro = new Casillas();
 
         panelInferior = new HBox(10);
         infoDinero = new Label("Dinero actual: ");
@@ -50,7 +57,10 @@ public class EscenaTragaperras extends Scene {
         barra.getMenus().add(mJuego);
         raiz.setTop(barra);
         // Aqui devemos crear la zona central
-
+        panelCasillas.setStyle("-fx-background-color: #E6E6FA;");
+        panelCasillas.getChildren().addAll(izquierda,centro,derecha);
+        panelCasillas.setAlignment(Pos.CENTER);
+        raiz.setCenter(panelCasillas);
         // preparar la zona inferior
         panelInferior.setAlignment(Pos.CENTER);
         panelInferior.setPadding(new Insets(10));
