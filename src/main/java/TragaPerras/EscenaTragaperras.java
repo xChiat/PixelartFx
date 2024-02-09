@@ -62,9 +62,17 @@ public class EscenaTragaperras extends Scene {
         panelCasillas.setAlignment(Pos.CENTER);
         raiz.setCenter(panelCasillas);
         // preparar la zona inferior
+        btnApostar.setOnAction(e-> ejecutarTiradas());
         panelInferior.setAlignment(Pos.CENTER);
         panelInferior.setPadding(new Insets(10));
         panelInferior.getChildren().addAll(infoDinero,dineroActual,btnApostar,infoApuesta,dineroApostado);
         raiz.setBottom(panelInferior);
+    }
+
+    private void ejecutarTiradas() {
+        btnApostar.setDisable(true);
+        izquierda.tirar(null);
+        centro.tirar(null);
+        derecha.tirar(btnApostar);
     }
 }
