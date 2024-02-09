@@ -62,7 +62,7 @@ public class EscenaTragaperras extends Scene {
         panelCasillas.setAlignment(Pos.CENTER);
         raiz.setCenter(panelCasillas);
         // preparar la zona inferior
-        btnApostar.setOnAction(e-> ejecutarTiradas());
+        btnApostar.setOnAction(e-> ejecutarTiradas()); // agregamos una funcionalidad a btnApostar
         panelInferior.setAlignment(Pos.CENTER);
         panelInferior.setPadding(new Insets(10));
         panelInferior.getChildren().addAll(infoDinero,dineroActual,btnApostar,infoApuesta,dineroApostado);
@@ -70,9 +70,10 @@ public class EscenaTragaperras extends Scene {
     }
 
     private void ejecutarTiradas() {
-        btnApostar.setDisable(true);
+        btnApostar.setDisable(true); // desabilita el btn para que no se precione repetidamente hasta acabar la animación
+        // accionamos la funcion tirar en las tres casillas
         izquierda.tirar(null);
         centro.tirar(null);
-        derecha.tirar(btnApostar);
+        derecha.tirar(btnApostar); // agregamos el btnApostar para rehabilitarlo al finalisar con la tirada
     }
 }
