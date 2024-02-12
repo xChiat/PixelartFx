@@ -8,6 +8,8 @@ import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 
+import javax.swing.*;
+
 
 public class EscenaTragaperras extends Scene {
     private BorderPane raiz;
@@ -24,6 +26,8 @@ public class EscenaTragaperras extends Scene {
     private Label infoDinero, dineroActual,infoApuesta;
     private Button btnApostar;
     private TextField dineroApostado;
+    private int nDineroActual;
+    private int nApuesta;
 
     public EscenaTragaperras(Parent raiz, double ancho, double alto) {
         super(raiz, ancho, alto);
@@ -71,6 +75,29 @@ public class EscenaTragaperras extends Scene {
 
     private void ejecutarTiradas() {
         btnApostar.setDisable(true); // desabilita el btn para que no se precione repetidamente hasta acabar la animación
+        nDineroActual = Integer.parseInt(dineroActual.getText());
+
+        try{
+            nApuesta = Integer.parseInt(dineroApostado.getText());
+        }catch (NumberFormatException e){
+            JOptionPane.showMessageDialog(null,"Valor no valido, intente nuevamente");
+            btnApostar.setDisable(false);
+            return;
+        }
+        if(nApuesta<=0){
+            JOptionPane.showMessageDialog(null,"El dinero apostado no puede ser menor o igual a 0");
+            btnApostar.setDisable(false);
+            return;
+        }
+        if(nApuesta>nDineroActual){
+            JOptionPane.showMessageDialog(null,"El dinero apostado no puede ser mayor que el dinero actual");
+            btnApostar.setDisable(false);
+            return;
+        }
+
+        nDineroActual -= nApuesta;
+        dineroActual.setText(String.valueOf(nDineroActual));
+
         // accionamos la funcion tirar en las tres casillas
         izquierda.tirar(null);
         centro.tirar(null);
