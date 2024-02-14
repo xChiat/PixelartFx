@@ -10,7 +10,7 @@ public class Main extends Application {
     }
     @Override
     public void start(Stage escenario) throws Exception {
-        EscenaTragaperras escena = new EscenaTragaperras(new BorderPane(),600,500);
+        EscenaTragaperras escena = new EscenaTragaperras(new BorderPane(),600,500,escenario);
         escenario.setTitle("Tragaperras");
         escenario.setScene(escena);
         escenario.show();

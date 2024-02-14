@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
 
 import javax.swing.*;
 
@@ -28,10 +29,12 @@ public class EscenaTragaperras extends Scene {
     private TextField dineroApostado;
     private int nDineroActual;
     private int nApuesta;
+    private Stage escenario;
 
-    public EscenaTragaperras(Parent raiz, double ancho, double alto) {
+    public EscenaTragaperras(Parent raiz, double ancho, double alto, Stage escenario) {
         super(raiz, ancho, alto);
         this.raiz = (BorderPane) raiz;
+        this.escenario = escenario;
         barra = new MenuBar();
         mJuego = new Menu("Juego");
         iSalir = new MenuItem("Salir");
@@ -85,7 +88,8 @@ public class EscenaTragaperras extends Scene {
             return;
         }
         if(nApuesta<=0){
-            JOptionPane.showMessageDialog(null,"El dinero apostado no puede ser menor o igual a 0");
+//            JOptionPane.showMessageDialog(null,"El dinero apostado no puede ser menor o igual a 0");
+            Ventanas.abrirVentana("El dinero apostado no puede ser menor o igual a 0", escenario);
             btnApostar.setDisable(false);
             return;
         }
