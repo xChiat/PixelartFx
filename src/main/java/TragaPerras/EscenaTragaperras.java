@@ -83,7 +83,8 @@ public class EscenaTragaperras extends Scene {
         try{
             nApuesta = Integer.parseInt(dineroApostado.getText());
         }catch (NumberFormatException e){
-            JOptionPane.showMessageDialog(null,"Valor no valido, intente nuevamente");
+//            JOptionPane.showMessageDialog(null,"Valor no valido, intente nuevamente");
+            Ventanas.abrirVentana("Valor no valido, intente nuevamente", escenario);
             btnApostar.setDisable(false);
             return;
         }
@@ -94,7 +95,8 @@ public class EscenaTragaperras extends Scene {
             return;
         }
         if(nApuesta>nDineroActual){
-            JOptionPane.showMessageDialog(null,"El dinero apostado no puede ser mayor que el dinero actual");
+//            JOptionPane.showMessageDialog(null,"El dinero apostado no puede ser mayor que el dinero actual");
+            Ventanas.abrirVentana("El dinero apostado no puede ser mayor que el dinero actual", escenario);
             btnApostar.setDisable(false);
             return;
         }
