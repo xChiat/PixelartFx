@@ -21,14 +21,14 @@ public class EscenaTragaperras extends Scene {
 
     // Atributos Zona Central.
     private HBox panelCasillas;
-    private Casillas izquierda,centro,derecha;
+    private static Casillas izquierda,centro,derecha;
     // Atributos zona inferior.
     private HBox panelInferior;
-    private Label infoDinero, dineroActual,infoApuesta;
+    private static Label infoDinero, dineroActual,infoApuesta;
     private Button btnApostar;
     private TextField dineroApostado;
-    private int nDineroActual;
-    private int nApuesta;
+    private static int nDineroActual;
+    private static int nApuesta;
     private Stage escenario;
 
     public EscenaTragaperras(Parent raiz, double ancho, double alto, Stage escenario) {
@@ -108,5 +108,25 @@ public class EscenaTragaperras extends Scene {
         izquierda.tirar(null);
         centro.tirar(null);
         derecha.tirar(btnApostar); // agregamos el btnApostar para rehabilitarlo al finalisar con la tirada
+    }
+    public static void comprobarTiradas(){
+        int nIzq = izquierda.getIdImagen();
+        int nCentro = centro.getIdImagen();
+        int nDer = derecha.getIdImagen();
+
+        System.out.println(nIzq + " " + nCentro + " " + nDer);
+
+        int nPremio = 0;
+
+        if(nIzq == nCentro && nIzq == nDer) {
+            // tres espadas de diamantes
+            if(nIzq == 0) nPremio += nApuesta*50;
+            // tres creepers
+            if(nIzq == 1) nPremio += nApuesta*5;
+            // tres Manzana de notch
+            if(nIzq == 2) nPremio += nApuesta*70;
+
+        }
+        dineroActual.setText(String.valueOf(nDineroActual+nPremio));
     }
 }
