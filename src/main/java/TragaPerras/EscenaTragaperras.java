@@ -125,7 +125,26 @@ public class EscenaTragaperras extends Scene {
             if(nIzq == 1) nPremio += nApuesta*5;
             // tres Manzana de notch
             if(nIzq == 2) nPremio += nApuesta*70;
-
+            // tres Manzana de notch
+            if(nIzq == 3) nPremio += nApuesta*70;
+            // tres Manzana de notch
+            if(nIzq == 4) nPremio += nApuesta*70;
+            // tres Manzana de notch
+            if(nIzq == 5) nPremio += nApuesta*70;
+            // tres Manzana de notch
+            if(nIzq == 6) nPremio += nApuesta*70;
+            // tres Manzana de notch
+            if(nIzq == 7) nPremio += nApuesta*70;
+            // tres Manzana de notch
+            if(nIzq == 8) nPremio += nApuesta*70;
+            // tres Manzana de notch
+            if(nIzq == 9) nPremio += nApuesta*70;
+            // tres Manzana de notch
+            if(nIzq == 10) nPremio += nApuesta*70;
+            // tres Manzana de notch
+            if(nIzq == 11) nPremio += nApuesta*70;
+            // tres Manzana de notch
+            if(nIzq == 12) nPremio += nApuesta*70;
         }
         dineroActual.setText(String.valueOf(nDineroActual+nPremio));
     }
