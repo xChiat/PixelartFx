@@ -120,11 +120,11 @@ public class EscenaTragaperras extends Scene {
 
         if(nIzq == nCentro && nIzq == nDer) {
             // tres espadas de diamantes
-            if(nIzq == 0) nPremio += nApuesta*50;
+            if(nIzq == 0) nPremio += nApuesta*5;
             // tres creepers
-            if(nIzq == 1) nPremio -= nApuesta*30;
+            if(nIzq == 1) nPremio -= nApuesta*3; // te quitan vida
             // tres Manzana de notch
-            if(nIzq == 2) nPremio += nApuesta*70;
+            if(nIzq == 2) nPremio += nApuesta*7; // recuperas vida
             // tres sopas misteriosas
             if(nIzq == 3) {
                 int f = (int) Math.round(Math.random() *10);
@@ -136,7 +136,7 @@ public class EscenaTragaperras extends Scene {
                         nPremio -= nApuesta*8; // blindness
                         break;
                     case 2:
-                        nPremio += nApuesta*2; // saturation
+                        nPremio += nApuesta*2; // saturation recupera 2 de vida
                         break;
                     case 3:
                         nPremio += nApuesta*3; // saturation
@@ -165,26 +165,225 @@ public class EscenaTragaperras extends Scene {
                 }
             }
             // tres netherite upgrade
-            if(nIzq == 4) nPremio += nApuesta*20;
+            if(nIzq == 4) nPremio += nApuesta*2;
             // tres espadas de netherita
-            if(nIzq == 5) nPremio += nApuesta*70;
+            if(nIzq == 5) nPremio += nApuesta*7;
             // tres ojos de ender
-            if(nIzq == 6) nPremio += nApuesta*30; // al juntar 11 abre la battalla contra la dragona
+            if(nIzq == 6) nPremio += nApuesta*3; // al juntar 11 abre la battalla contra la dragona
             // tres lingotes de netherite
-            if(nIzq == 7) nPremio += nApuesta*90;
+            if(nIzq == 7) nPremio += nApuesta*9;
             // tres pigglins
-            if(nIzq == 8) nPremio -= nApuesta*50; // evitable si tiene reserva de oro
+            if(nIzq == 8) nPremio -= nApuesta*5; // evitable si tiene reserva de oro
             // tres lingotes de oro
-            if(nIzq == 9) nPremio += nApuesta*90;
+            if(nIzq == 9) nPremio += nApuesta*9;
             // tres cristales del end
-            if(nIzq == 10) nPremio -= nApuesta*70; // a menos que estes en el combate contra la dragona
+            if(nIzq == 10) nPremio -= nApuesta*7; // a menos que estes en el combate contra la dragona
             // tres totems
-            if(nIzq == 11) nPremio += nApuesta*100;  // una vida extra
+            if(nIzq == 11) nPremio += nApuesta*10;  // una vida extra
             // tres cabesas de wither
-            if(nIzq == 12) nPremio -= nApuesta*90; // invoca al wither + efecto withered
+            if(nIzq == 12) nPremio -= nApuesta*9; // invoca al wither + efecto withered
             // tres lavas
-            if(nIzq == 13) nPremio -= nApuesta*80; // te quemas
+            if(nIzq == 13) nPremio -= nApuesta*8; // te quemas
             }
+
+        if(nIzq == nDer && nIzq != nCentro &&nIzq!= 12 && nCentro!= 8 && nCentro!= 9) {
+            // dos espadas de diamantes
+            if(nCentro == 0) nPremio += nApuesta*3;
+            // dos creepers
+            if(nCentro == 1) nPremio -= nApuesta*2; // te quitan vida
+            // dos Manzana de notch
+            if(nCentro == 2) nPremio += nApuesta*5; // recuperas vida
+            // dos sopas misteriosas
+            if(nCentro == 3) {
+                int f = (int) Math.round(Math.random() *10);
+                switch (f) {
+                    case 0:
+                        nPremio += nApuesta*2; // resistencia al fuego (concede un escudo contra el fuego)
+                        break;
+                    case 1:
+                        nPremio -= nApuesta*4; // blindness
+                        break;
+                    case 2:
+                        nPremio += nApuesta; // saturation
+                        break;
+                    case 3:
+                        nPremio += nApuesta*2; // saturation recupera 1 de vida
+                        break;
+                    case 4:
+                        nPremio += nApuesta*3; // jump boost (permite una tirada gratis)
+                        break;
+                    case 5:
+                        nPremio -= nApuesta*6; // poison (quita 2 de vida)
+                        break;
+                    case 6:
+                        nPremio += nApuesta*4; // regeneration (restaura 2 de vida)
+                        break;
+                    case 7:
+                        nPremio += nApuesta*3; // night vision
+                        break;
+                    case 8:
+                        nPremio += nApuesta*2; // night vision
+                        break;
+                    case 9:
+                        nPremio -= nApuesta*4; // weakness
+                        break;
+                    case 10:
+                        nPremio -= nApuesta*5; // whiter (quita 2 de vida + efecto withered)
+                        break;
+                }
+            }
+            // dos netherite upgrade
+            if(nCentro == 4) nPremio += nApuesta;
+            // dos espadas de netherita
+            if(nCentro == 5) nPremio += nApuesta*5;
+            // dos ojos de ender
+            if(nCentro == 6) nPremio += nApuesta; // al juntar 11 abre la battalla contra la dragona
+            // dos lingotes de netherite
+            if(nCentro == 7) nPremio += nApuesta*7;
+            // dos cristales del end
+            if(nCentro == 10) nPremio -= nApuesta*5; // a menos que estes en el combate contra la dragona
+            // dos totems
+            if(nCentro == 11) nPremio += nApuesta*8;  // una vida extra
+            // dos lavas
+            if(nCentro == 13) nPremio -= nApuesta*6; // te quemas y pierdes vida
+        }
+        if(nCentro == nDer && nCentro!= nIzq && nCentro!= 12 && nCentro!= 8 && nCentro!= 9) {
+            // dos espadas de diamantes
+            if(nCentro == 0) nPremio += nApuesta*3;
+            // dos creepers
+            if(nCentro == 1) nPremio -= nApuesta*2; // te quitan vida
+            // dos Manzana de notch
+            if(nCentro == 2) nPremio += nApuesta*5; // recuperas vida
+            // dos sopas misteriosas
+            if(nCentro == 3) {
+                int f = (int) Math.round(Math.random() *10);
+                switch (f) {
+                    case 0:
+                        nPremio += nApuesta*2; // resistencia al fuego (concede un escudo contra el fuego)
+                        break;
+                    case 1:
+                        nPremio -= nApuesta*4; // blindness
+                        break;
+                    case 2:
+                        nPremio += nApuesta; // saturation
+                        break;
+                    case 3:
+                        nPremio += nApuesta*2; // saturation recupera 1 de vida
+                        break;
+                    case 4:
+                        nPremio += nApuesta*3; // jump boost (permite una tirada gratis)
+                        break;
+                    case 5:
+                        nPremio -= nApuesta*6; // poison (quita 2 de vida)
+                        break;
+                    case 6:
+                        nPremio += nApuesta*4; // regeneration (restaura 2 de vida)
+                        break;
+                    case 7:
+                        nPremio += nApuesta*3; // night vision
+                        break;
+                    case 8:
+                        nPremio += nApuesta*2; // night vision
+                        break;
+                    case 9:
+                        nPremio -= nApuesta*4; // weakness
+                        break;
+                    case 10:
+                        nPremio -= nApuesta*5; // whiter (quita 2 de vida + efecto withered)
+                        break;
+                }
+            }
+            // dos netherite upgrade
+            if(nCentro == 4) nPremio += nApuesta;
+            // dos espadas de netherita
+            if(nCentro == 5) nPremio += nApuesta*5;
+            // dos ojos de ender
+            if(nCentro == 6) nPremio += nApuesta; // al juntar 11 abre la battalla contra la dragona
+            // dos lingotes de netherite
+            if(nCentro == 7) nPremio += nApuesta*7;
+            // dos cristales del end
+            if(nCentro == 10) nPremio -= nApuesta*5; // a menos que estes en el combate contra la dragona
+            // dos totems
+            if(nCentro == 11) nPremio += nApuesta*8;  // una vida extra
+            // dos lavas
+            if(nCentro == 13) nPremio -= nApuesta*6; // te quemas y pierdes vida
+        }
+        if(nCentro == nIzq && nCentro != nDer && nCentro != 12 && nCentro!= 8 && nCentro!= 9) {
+            // dos espadas de diamantes
+            if(nCentro == 0) nPremio += nApuesta*3;
+            // dos creepers
+            if(nCentro == 1) nPremio -= nApuesta*2; // te quitan vida
+            // dos Manzana de notch
+            if(nCentro == 2) nPremio += nApuesta*5; // recuperas vida
+            // dos sopas misteriosas
+            if(nCentro == 3) {
+                int f = (int) Math.round(Math.random() *10);
+                switch (f) {
+                    case 0:
+                        nPremio += nApuesta*2; // resistencia al fuego (concede un escudo contra el fuego)
+                        break;
+                    case 1:
+                        nPremio -= nApuesta*4; // blindness
+                        break;
+                    case 2:
+                        nPremio += nApuesta; // saturation
+                        break;
+                    case 3:
+                        nPremio += nApuesta*2; // saturation recupera 1 de vida
+                        break;
+                    case 4:
+                        nPremio += nApuesta*3; // jump boost (permite una tirada gratis)
+                        break;
+                    case 5:
+                        nPremio -= nApuesta*6; // poison (quita 2 de vida)
+                        break;
+                    case 6:
+                        nPremio += nApuesta*4; // regeneration (restaura 2 de vida)
+                        break;
+                    case 7:
+                        nPremio += nApuesta*3; // night vision
+                        break;
+                    case 8:
+                        nPremio += nApuesta*2; // night vision
+                        break;
+                    case 9:
+                        nPremio -= nApuesta*4; // weakness
+                        break;
+                    case 10:
+                        nPremio -= nApuesta*5; // whiter (quita 2 de vida + efecto withered)
+                        break;
+                }
+            }
+            // dos netherite upgrade
+            if(nCentro == 4) nPremio += nApuesta;
+            // dos espadas de netherita
+            if(nCentro == 5) nPremio += nApuesta*5;
+            // dos ojos de ender
+            if(nCentro == 6) nPremio += nApuesta; // al juntar 11 abre la battalla contra la dragona
+            // dos lingotes de netherite
+            if(nCentro == 7) nPremio += nApuesta*7;
+            // dos cristales del end
+            if(nCentro == 10) nPremio -= nApuesta*5; // a menos que estes en el combate contra la dragona
+            // dos totems
+            if(nCentro == 11) nPremio += nApuesta*8;  // una vida extra
+            // dos lavas
+            if(nCentro == 13) nPremio -= nApuesta*6; // te quemas y pierdes vida
+        }
+        if(nIzq == 4 && nCentro == 0 && nDer == 7) nPremio += nApuesta*8;
+        //un pigglin y dos lingotes de oro
+        if(nIzq == 8 && nCentro == 9 && nDer == 9
+                || nIzq == 9 && nCentro == 8 && nDer == 9
+                || nIzq == 9 && nCentro == 9 && nDer == 8)nPremio += nApuesta*7;
+        // dos pigglins y un lingote de oro
+        if(nIzq == nCentro && nIzq == 8|| nCentro == nDer && nDer == 8
+                || nIzq == nDer && nIzq== 8)nPremio -= nApuesta*5;
+        // un pigglin y un lingote de oro
+        if(nIzq == 8 && nCentro == 9 || nIzq == 9 && nCentro == 8
+                || nCentro == 9 && nDer == 8|| nCentro == 8 && nDer == 9
+                ||nDer == 9 && nIzq == 8|| nDer ==8 && nIzq== 9)nPremio += nApuesta*5;
+        // un bloque de lava
+        if(nIzq == 13 || nCentro == 13|| nDer == 13)nPremio -= nApuesta*5;
         dineroActual.setText(String.valueOf(nDineroActual+nPremio));
         }
+
     }
