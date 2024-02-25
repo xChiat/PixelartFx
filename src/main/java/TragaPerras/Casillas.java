@@ -9,11 +9,11 @@ import javafx.scene.image.ImageView;
 public class Casillas extends Label {
     private Image[] imagenes;
     private ImageView[] vistas;
-    private int cImage = 13; // cambiar este numero para agregar mas imagenes.
+    private int cImage = 14; // cambiar este numero para agregar mas imagenes.
 
     public Casillas() {
-        imagenes = new Image[13]; // cambiar este numero para agregar mas imagenes.
-        vistas = new ImageView[13]; // cambiar este numero para agregar mas imagenes.
+        imagenes = new Image[14]; // cambiar este numero para agregar mas imagenes.
+        vistas = new ImageView[14]; // cambiar este numero para agregar mas imagenes.
 
         prepararImagenes();
     }
@@ -30,11 +30,11 @@ public class Casillas extends Label {
     public void tirar(Button btn){ // recibe un boton para rehabilitar el btn depues de acabar la animacion
         Thread hilo = new Thread(){
             public void run(){
-                for(int i = 0; i < 13; i++){
+                for(int i = 0; i < 14; i++){
                     try {
                         // para cambiar el numero de imagenes recuerda agrandar las listas vistas y imagenes
-                        int aux = (int) Math.round(Math.random() *12); // genera un numero aleatorio del 0 al 12
-                        if(aux == 2) aux = (int) Math.round(Math.random() *12); // si el numero es igual a dos repite la animacion nuevamente
+                        int aux = (int) Math.round(Math.random() *13); // genera un numero aleatorio del 0 al 13
+                        if(aux == 2) aux = (int) Math.round(Math.random() *13); // si el numero es igual a dos repite la animacion nuevamente
 
                         int n = aux;
 

@@ -122,30 +122,69 @@ public class EscenaTragaperras extends Scene {
             // tres espadas de diamantes
             if(nIzq == 0) nPremio += nApuesta*50;
             // tres creepers
-            if(nIzq == 1) nPremio += nApuesta*5;
+            if(nIzq == 1) nPremio -= nApuesta*30;
             // tres Manzana de notch
             if(nIzq == 2) nPremio += nApuesta*70;
-            // tres Manzana de notch
-            if(nIzq == 3) nPremio += nApuesta*70;
-            // tres Manzana de notch
-            if(nIzq == 4) nPremio += nApuesta*70;
-            // tres Manzana de notch
+            // tres sopas misteriosas
+            if(nIzq == 3) {
+                int f = (int) Math.round(Math.random() *10);
+                switch (f) {
+                    case 0:
+                        nPremio += nApuesta*4; // resistencia al fuego (concede un escudo contra el fuego)
+                        break;
+                    case 1:
+                        nPremio -= nApuesta*8; // blindness
+                        break;
+                    case 2:
+                        nPremio += nApuesta*2; // saturation
+                        break;
+                    case 3:
+                        nPremio += nApuesta*3; // saturation
+                        break;
+                    case 4:
+                        nPremio += nApuesta*6; // jump boost (permite una tirada gratis)
+                        break;
+                    case 5:
+                        nPremio -= nApuesta*12; // poison (quita 4 de vida)
+                        break;
+                    case 6:
+                        nPremio += nApuesta*8; // regeneration (restaura 3 de vida)
+                        break;
+                    case 7:
+                        nPremio += nApuesta*5; // night vision
+                        break;
+                    case 8:
+                        nPremio += nApuesta*4; // night vision
+                        break;
+                    case 9:
+                        nPremio -= nApuesta*9; // weakness
+                        break;
+                    case 10:
+                        nPremio -= nApuesta*10; // whiter (quita 4 de vida + efecto withered)
+                        break;
+                }
+            }
+            // tres netherite upgrade
+            if(nIzq == 4) nPremio += nApuesta*20;
+            // tres espadas de netherita
             if(nIzq == 5) nPremio += nApuesta*70;
-            // tres Manzana de notch
-            if(nIzq == 6) nPremio += nApuesta*70;
-            // tres Manzana de notch
-            if(nIzq == 7) nPremio += nApuesta*70;
-            // tres Manzana de notch
-            if(nIzq == 8) nPremio += nApuesta*70;
-            // tres Manzana de notch
-            if(nIzq == 9) nPremio += nApuesta*70;
-            // tres Manzana de notch
-            if(nIzq == 10) nPremio += nApuesta*70;
-            // tres Manzana de notch
-            if(nIzq == 11) nPremio += nApuesta*70;
-            // tres Manzana de notch
-            if(nIzq == 12) nPremio += nApuesta*70;
-        }
+            // tres ojos de ender
+            if(nIzq == 6) nPremio += nApuesta*30; // al juntar 11 abre la battalla contra la dragona
+            // tres lingotes de netherite
+            if(nIzq == 7) nPremio += nApuesta*90;
+            // tres pigglins
+            if(nIzq == 8) nPremio -= nApuesta*50; // evitable si tiene reserva de oro
+            // tres lingotes de oro
+            if(nIzq == 9) nPremio += nApuesta*90;
+            // tres cristales del end
+            if(nIzq == 10) nPremio -= nApuesta*70; // a menos que estes en el combate contra la dragona
+            // tres totems
+            if(nIzq == 11) nPremio += nApuesta*100;  // una vida extra
+            // tres cabesas de wither
+            if(nIzq == 12) nPremio -= nApuesta*90; // invoca al wither + efecto withered
+            // tres lavas
+            if(nIzq == 13) nPremio -= nApuesta*80; // te quemas
+            }
         dineroActual.setText(String.valueOf(nDineroActual+nPremio));
+        }
     }
-}
