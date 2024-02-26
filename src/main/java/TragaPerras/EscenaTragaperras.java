@@ -369,6 +369,7 @@ public class EscenaTragaperras extends Scene {
             // dos lavas
             if(nCentro == 13) nPremio -= nApuesta*6; // te quemas y pierdes vida
         }
+        // Upgrade
         if(nIzq == 4 && nCentro == 0 && nDer == 7) nPremio += nApuesta*8;
         //un pigglin y dos lingotes de oro
         if(nIzq == 8 && nCentro == 9 && nDer == 9
