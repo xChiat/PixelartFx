@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import javax.swing.*;
@@ -22,7 +23,12 @@ public class EscenaTragaperras extends Scene {
     // Atributos Zona Central.
     private HBox panelCasillas;
     private static Casillas izquierda,centro,derecha;
+    // barra vida
+    private HBox barraVida;
+    private BarraDeVida c1,c2,c3,c4,c5,c6,c7,c8,c9,c10;
+
     // Atributos zona inferior.
+    private HBox pnlInf;
     private HBox panelInferior;
     private static Label infoDinero, dineroActual,infoApuesta;
     private Button btnApostar;
@@ -53,6 +59,16 @@ public class EscenaTragaperras extends Scene {
         dineroApostado.setMinSize(60,25);
         dineroApostado.setMaxSize(60,25);
 
+        pnlInf = new HBox();
+        pnlInf.setAlignment(Pos.BOTTOM_CENTER);
+
+        barraVida = new HBox();
+        c1 = new BarraDeVida(); c2 = new BarraDeVida();
+        c3 = new BarraDeVida(); c4 = new BarraDeVida();
+        c5 = new BarraDeVida(); c6 = new BarraDeVida();
+        c7 = new BarraDeVida(); c8 = new BarraDeVida();
+        c9 = new BarraDeVida(); c10 = new BarraDeVida();
+
         montarEscena();
 
     }
@@ -68,12 +84,20 @@ public class EscenaTragaperras extends Scene {
         panelCasillas.getChildren().addAll(izquierda,centro,derecha);
         panelCasillas.setAlignment(Pos.CENTER);
         raiz.setCenter(panelCasillas);
+
         // preparar la zona inferior
         btnApostar.setOnAction(e-> ejecutarTiradas()); // agregamos una funcionalidad a btnApostar
         panelInferior.setAlignment(Pos.CENTER);
         panelInferior.setPadding(new Insets(10));
         panelInferior.getChildren().addAll(infoDinero,dineroActual,btnApostar,infoApuesta,dineroApostado);
-        raiz.setBottom(panelInferior);
+
+
+        // preparamos la barra de vida
+        barraVida.getChildren().addAll(c1,c2,c3,c4,c5,c6,c7,c8,c9,c10);
+        barraVida.setPadding(new Insets(15));
+        barraVida.setAlignment(Pos.BOTTOM_CENTER);
+        pnlInf.getChildren().addAll(barraVida,panelInferior);
+        raiz.setBottom(pnlInf);
     }
 
     private void ejecutarTiradas() {
