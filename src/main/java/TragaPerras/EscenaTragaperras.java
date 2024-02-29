@@ -174,6 +174,8 @@ public class EscenaTragaperras extends Scene {
                         break;
                     case 5:
                         nPremio -= nApuesta*12; // poison (quita 4 de vida)
+                        int d = 4;
+                        for(int i = 0; i < d; i++) {Damage(d);}
                         break;
                     case 6:
                         nPremio += nApuesta*8; // regeneration (restaura 3 de vida)
@@ -189,6 +191,8 @@ public class EscenaTragaperras extends Scene {
                         break;
                     case 10:
                         nPremio -= nApuesta*10; // whiter (quita 4 de vida + efecto withered)
+                        int e = 4;
+                        for(int i = 0; i < e; i++) {Damage(e);}
                         break;
                 }
             }
@@ -201,24 +205,44 @@ public class EscenaTragaperras extends Scene {
             // tres lingotes de netherite
             if(nIzq == 7) nPremio += nApuesta*9;
             // tres pigglins
-            if(nIzq == 8) nPremio -= nApuesta*5; // evitable si tiene reserva de oro
+            if(nIzq == 8){
+                nPremio -= nApuesta*5; // evitable si tiene reserva de oro
+                int d = 4;
+                for(int i = 0; i < d; i++) {Damage(d);}
+            }
             // tres lingotes de oro
             if(nIzq == 9) nPremio += nApuesta*9;
             // tres cristales del end
-            if(nIzq == 10) nPremio -= nApuesta*7; // a menos que estes en el combate contra la dragona
+            if(nIzq == 10) {
+                nPremio -= nApuesta * 7; // a menos que estes en el combate contra la dragona
+                int d = 6;
+                for(int i = 0; i < d; i++) {Damage(d);}
+            }
             // tres totems
             if(nIzq == 11) nPremio += nApuesta*10;  // una vida extra
             // tres cabesas de wither
-            if(nIzq == 12) nPremio -= nApuesta*9; // invoca al wither + efecto withered
-            // tres lavas
-            if(nIzq == 13) nPremio -= nApuesta*8; // te quemas
+            if(nIzq == 12) {
+                nPremio -= nApuesta * 9; // invoca al wither + efecto withered
+                int d = 7;
+                for(int i = 0; i < d; i++) {Damage(d);}
             }
+            // tres lavas
+            if(nIzq == 13) {
+                nPremio -= nApuesta * 8; // te quemas
+                int d = 5;
+                for(int i = 0; i < d; i++) {Damage(d);}
+            }
+        }
 
         if(nIzq == nDer && nIzq != nCentro &&nIzq!= 12 && nCentro!= 8 && nCentro!= 9) {
             // dos espadas de diamantes
             if(nCentro == 0) nPremio += nApuesta*3;
             // dos creepers
-            if(nCentro == 1) nPremio -= nApuesta*2; // te quitan vida
+            if(nCentro == 1) {
+                nPremio -= nApuesta * 2; // te quitan vida
+                int d = 2;
+                for(int i = 0; i < d; i++) {Damage(d);}
+            }
             // dos Manzana de notch
             if(nCentro == 2) nPremio += nApuesta*5; // recuperas vida
             // dos sopas misteriosas
@@ -242,6 +266,8 @@ public class EscenaTragaperras extends Scene {
                         break;
                     case 5:
                         nPremio -= nApuesta*6; // poison (quita 2 de vida)
+                        int d = 2;
+                        for(int i = 0; i < d; i++) {Damage(d);}
                         break;
                     case 6:
                         nPremio += nApuesta*4; // regeneration (restaura 2 de vida)
@@ -254,9 +280,13 @@ public class EscenaTragaperras extends Scene {
                         break;
                     case 9:
                         nPremio -= nApuesta*4; // weakness
+                        int a = 1;
+                        for(int i = 0; i < a; i++) {Damage(a);}
                         break;
                     case 10:
                         nPremio -= nApuesta*5; // whiter (quita 2 de vida + efecto withered)
+                        int e = 2;
+                        for(int i = 0; i < e; i++) {Damage(e);}
                         break;
                 }
             }
@@ -269,17 +299,29 @@ public class EscenaTragaperras extends Scene {
             // dos lingotes de netherite
             if(nCentro == 7) nPremio += nApuesta*7;
             // dos cristales del end
-            if(nCentro == 10) nPremio -= nApuesta*5; // a menos que estes en el combate contra la dragona
+            if(nCentro == 10) {
+                nPremio -= nApuesta * 5; // a menos que estes en el combate contra la dragona
+                int d = 3;
+                for(int i = 0; i < d; i++) {Damage(d);}
+            }
             // dos totems
             if(nCentro == 11) nPremio += nApuesta*8;  // una vida extra
             // dos lavas
-            if(nCentro == 13) nPremio -= nApuesta*6; // te quemas y pierdes vida
+            if(nCentro == 13) {
+                nPremio -= nApuesta * 6; // te quemas y pierdes vida
+                int d = 3;
+                for(int i = 0; i < d; i++) {Damage(d);}
+            }
         }
         if(nCentro == nDer && nCentro!= nIzq && nCentro!= 12 && nCentro!= 8 && nCentro!= 9) {
             // dos espadas de diamantes
             if(nCentro == 0) nPremio += nApuesta*3;
             // dos creepers
-            if(nCentro == 1) nPremio -= nApuesta*2; // te quitan vida
+            if(nCentro == 1) {
+                nPremio -= nApuesta * 2; // te quitan vida
+                int d = 2;
+                for(int i = 0; i < d; i++) {Damage(d);}
+            }
             // dos Manzana de notch
             if(nCentro == 2) nPremio += nApuesta*5; // recuperas vida
             // dos sopas misteriosas
@@ -303,6 +345,8 @@ public class EscenaTragaperras extends Scene {
                         break;
                     case 5:
                         nPremio -= nApuesta*6; // poison (quita 2 de vida)
+                        int d = 2;
+                        for(int i = 0; i < d; i++) {Damage(d);}
                         break;
                     case 6:
                         nPremio += nApuesta*4; // regeneration (restaura 2 de vida)
@@ -315,9 +359,13 @@ public class EscenaTragaperras extends Scene {
                         break;
                     case 9:
                         nPremio -= nApuesta*4; // weakness
+                        int a = 1;
+                        for(int i = 0; i < a; i++) {Damage(a);}
                         break;
                     case 10:
                         nPremio -= nApuesta*5; // whiter (quita 2 de vida + efecto withered)
+                        int e = 2;
+                        for(int i = 0; i < e; i++) {Damage(e);}
                         break;
                 }
             }
@@ -330,17 +378,29 @@ public class EscenaTragaperras extends Scene {
             // dos lingotes de netherite
             if(nCentro == 7) nPremio += nApuesta*7;
             // dos cristales del end
-            if(nCentro == 10) nPremio -= nApuesta*5; // a menos que estes en el combate contra la dragona
+            if(nCentro == 10) {
+                nPremio -= nApuesta * 5; // a menos que estes en el combate contra la dragona
+                int d = 3;
+                for(int i = 0; i < d; i++) {Damage(d);}
+            }
             // dos totems
             if(nCentro == 11) nPremio += nApuesta*8;  // una vida extra
             // dos lavas
-            if(nCentro == 13) nPremio -= nApuesta*6; // te quemas y pierdes vida
+            if(nCentro == 13) {
+                nPremio -= nApuesta * 6; // te quemas y pierdes vida
+                int d = 3;
+                for(int i = 0; i < d; i++) {Damage(d);}
+            }
         }
         if(nCentro == nIzq && nCentro != nDer && nCentro != 12 && nCentro!= 8 && nCentro!= 9) {
             // dos espadas de diamantes
             if(nCentro == 0) nPremio += nApuesta*3;
             // dos creepers
-            if(nCentro == 1) nPremio -= nApuesta*2; // te quitan vida
+            if(nCentro == 1) {
+                nPremio -= nApuesta * 2; // te quitan vida
+                int d = 2;
+                for(int i = 0; i < d; i++) {Damage(d);}
+            }
             // dos Manzana de notch
             if(nCentro == 2) nPremio += nApuesta*5; // recuperas vida
             // dos sopas misteriosas
@@ -364,6 +424,8 @@ public class EscenaTragaperras extends Scene {
                         break;
                     case 5:
                         nPremio -= nApuesta*6; // poison (quita 2 de vida)
+                        int d = 2;
+                        for(int i = 0; i < d; i++) {Damage(d);}
                         break;
                     case 6:
                         nPremio += nApuesta*4; // regeneration (restaura 2 de vida)
@@ -376,9 +438,13 @@ public class EscenaTragaperras extends Scene {
                         break;
                     case 9:
                         nPremio -= nApuesta*4; // weakness
+                        int a = 1;
+                        for(int i = 0; i < a; i++) {Damage(a);}
                         break;
                     case 10:
                         nPremio -= nApuesta*5; // whiter (quita 2 de vida + efecto withered)
+                        int e = 2;
+                        for(int i = 0; i < e; i++) {Damage(e);}
                         break;
                 }
             }
@@ -391,11 +457,19 @@ public class EscenaTragaperras extends Scene {
             // dos lingotes de netherite
             if(nCentro == 7) nPremio += nApuesta*7;
             // dos cristales del end
-            if(nCentro == 10) nPremio -= nApuesta*5; // a menos que estes en el combate contra la dragona
+            if(nCentro == 10) {
+                nPremio -= nApuesta * 5; // a menos que estes en el combate contra la dragona
+                int d = 3;
+                for(int i = 0; i < d; i++) {Damage(d);}
+            }
             // dos totems
             if(nCentro == 11) nPremio += nApuesta*8;  // una vida extra
             // dos lavas
-            if(nCentro == 13) nPremio -= nApuesta*6; // te quemas y pierdes vida
+            if(nCentro == 13) {
+                nPremio -= nApuesta * 6; // te quemas y pierdes vida
+                int d = 3;
+                for(int i = 0; i < d; i++) {Damage(d);}
+            }
         }
         // Upgrade
         if(nIzq == 4 && nCentro == 0 && nDer == 7) nPremio += nApuesta*8;
@@ -405,13 +479,21 @@ public class EscenaTragaperras extends Scene {
                 || nIzq == 9 && nCentro == 9 && nDer == 8)nPremio += nApuesta*7;
         // dos pigglins y un lingote de oro
         if(nIzq == nCentro && nIzq == 8|| nCentro == nDer && nDer == 8
-                || nIzq == nDer && nIzq== 8)nPremio -= nApuesta*5;
+                || nIzq == nDer && nIzq== 8) {
+            nPremio -= nApuesta * 5;
+            int d = 2;
+            for(int i = 0; i < d; i++) {Damage(d);}
+        }
         // un pigglin y un lingote de oro
         if(nIzq == 8 && nCentro == 9 || nIzq == 9 && nCentro == 8
                 || nCentro == 9 && nDer == 8|| nCentro == 8 && nDer == 9
                 ||nDer == 9 && nIzq == 8|| nDer ==8 && nIzq== 9)nPremio += nApuesta*5;
         // un bloque de lava
-        if(nIzq == 13 || nCentro == 13|| nDer == 13)nPremio -= nApuesta*5;
+        if(nIzq == 13 || nCentro == 13|| nDer == 13) {
+            nPremio -= nApuesta * 5;
+            int d = 2;
+            for(int i = 0; i < d; i++) {Damage(d);}
+        }
         dineroActual.setText(String.valueOf(nDineroActual+nPremio));
         }
 
