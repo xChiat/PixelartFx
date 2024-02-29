@@ -38,7 +38,7 @@ public class Casillas extends Label {
 
                         int n = aux;
 
-                        Platform.runLater(()-> setGraphic(vistas[1]));
+                        Platform.runLater(()-> setGraphic(vistas[n]));
 
                         Thread.sleep(80); // aumentamos el tiempo de la animacion para que pueda verse
 
