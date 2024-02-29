@@ -31,14 +31,12 @@ public class BarraDeVida extends Label {
         return n;
     }
     public void quitarVida(int idh){
-        System.out.println(idh);
         Thread hilo = new Thread(){
             public void run(){
                 try {
-                    int n = idh +1;
-                    Platform.runLater(()-> setGraphic(vistas[n]));
-
-                    Thread.sleep(23); // aumentamos el tiempo de la animacion para que pueda verse
+                    Platform.runLater(()-> setGraphic(vistas[idh]));
+                    System.out.println("num graphic: "+idh);
+                    Thread.sleep(0); // aumentamos el tiempo de la animacion para que pueda verse
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }

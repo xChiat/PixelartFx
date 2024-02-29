@@ -138,8 +138,6 @@ public class EscenaTragaperras extends Scene {
         int nCentro = centro.getIdImagen();
         int nDer = derecha.getIdImagen();
 
-        System.out.println(nIzq + " " + nCentro + " " + nDer);
-
         int nPremio = 0;
 
         if(nIzq == nCentro && nIzq == nDer) {
@@ -148,8 +146,9 @@ public class EscenaTragaperras extends Scene {
             // tres creepers
             if(nIzq == 1) {
                 nPremio -= nApuesta*4;
-                int d = 3;
-                Damage(d);
+                int d = 4;
+                for(int i = 0; i < d; i++) {Damage(d);}
+
             } // te quitan vida
 
             // tres Manzana de notch
@@ -425,48 +424,57 @@ public class EscenaTragaperras extends Scene {
 
         for(int f = 0; f < dmg; f++) {
 
-            System.out.println(n10+" "+n9+" "+n8+" "+n7+" "+n4+" "+n3+" "+n2+" "+n1);
+            //System.out.println(n10+" "+n9+" "+n8+" "+n7+" "+n4+" "+n3+" "+n2+" "+n1);
 
             if (n10 != 3) {
-                System.out.println(n10);
-                c10.quitarVida(n10);
                 n10 += 1;
+                System.out.println("c10: "+n10);
+                c10.quitarVida(n10);
             }
             if (n10 == 3 && n9 != 3) {
-                c9.quitarVida(n9);
                 n9 += 1;
+                System.out.println("c9: "+n9);
+                c9.quitarVida(n9);
             }
-            if (n9 == 3 && n8!= 3) {
-                c8.quitarVida(n8);
+            if (n10 == 3 && n9 == 3 && n8!= 3) {
                 n8 += 1;
+                System.out.println("c8: "+n8);
+                c8.quitarVida(n8);
             }
-            if (n8 == 3 && n7!= 3) {
-                c7.quitarVida(n7);
+            if (n10 == 3 && n9 == 3 && n8 == 3 && n7!= 3) {
                 n7 += 1;
+                System.out.println("c7: "+n7);
+                c7.quitarVida(n7);
             }
-            if (n7 == 3 && n6!= 3) {
-                c6.quitarVida(n6);
+            if (n9 == 3 && n8 == 3 && n7 == 3 && n6!= 3) {
                 n6 += 1;
+                System.out.println("c6: "+n6);
+                c6.quitarVida(n6);
             }
-            if(n6 == 3 && n5 != 3){
-                c5.quitarVida(n5);
+            if(n8 == 3 && n7 == 3 && n6 == 3 && n5 != 3){
                 n5 += 1;
+                System.out.println("c5: "+n5);
+                c5.quitarVida(n5);
             }
-            if (n5 == 3 && n4!= 3) {
-                c4.quitarVida(n4);
+            if (n7 == 3 && n6 == 3 && n5 == 3 && n4!= 3) {
                 n4 += 1;
+                System.out.println("c4: "+n4);
+                c4.quitarVida(n4);
             }
-            if (n4 == 3 && n3!= 3) {
-                c3.quitarVida(n3);
+            if (n6 == 3 && n5 == 3 && n4 == 3 && n3!= 3) {
                 n3 += 1;
+                System.out.println("c3: "+n3);
+                c3.quitarVida(n3);
             }
-            if (n3 == 3 && n2!= 3) {
-                c2.quitarVida(n2);
+            if (n5 == 3 && n4 == 3 && n3 == 3 && n2!= 3) {
                 n2 += 1;
+                System.out.println("c2: "+n2);
+                c2.quitarVida(n2);
             }
-            if (n2 == 3 && n1!= 3) {
-                c1.quitarVida(n1);
+            if (n4 == 3 && n3 == 3 && n2 == 3 && n1!= 3) {
                 n1 += 1;
+                System.out.println("c1: "+n1);
+                c1.quitarVida(n1);
             }
         }
     }
