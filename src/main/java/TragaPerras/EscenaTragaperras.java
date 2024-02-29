@@ -25,7 +25,7 @@ public class EscenaTragaperras extends Scene {
     private static Casillas izquierda,centro,derecha;
     // barra vida
     private HBox barraVida;
-    private BarraDeVida c1,c2,c3,c4,c5,c6,c7,c8,c9,c10;
+    private static BarraDeVida c1,c2,c3,c4,c5,c6,c7,c8,c9,c10;
 
     // Atributos zona inferior.
     private HBox pnlInf;
@@ -146,7 +146,12 @@ public class EscenaTragaperras extends Scene {
             // tres espadas de diamantes
             if(nIzq == 0) nPremio += nApuesta*5;
             // tres creepers
-            if(nIzq == 1) nPremio -= nApuesta*3; // te quitan vida
+            if(nIzq == 1) {
+                nPremio -= nApuesta*4;
+                int d = 3;
+                Damage(d);
+            } // te quitan vida
+
             // tres Manzana de notch
             if(nIzq == 2) nPremio += nApuesta*7; // recuperas vida
             // tres sopas misteriosas
@@ -411,4 +416,58 @@ public class EscenaTragaperras extends Scene {
         dineroActual.setText(String.valueOf(nDineroActual+nPremio));
         }
 
+    public static void Damage(int dmg) {
+        int n10 = c10.getIdHeart(); int n9 = c9.getIdHeart();
+        int n8 = c8.getIdHeart(); int n7 = c7.getIdHeart();
+        int n6 = c6.getIdHeart(); int n5 = c5.getIdHeart();
+        int n4 = c4.getIdHeart(); int n3 = c3.getIdHeart();
+        int n2 = c2.getIdHeart(); int n1 = c1.getIdHeart();
+
+        for(int f = 0; f < dmg; f++) {
+
+            System.out.println(n10+" "+n9+" "+n8+" "+n7+" "+n4+" "+n3+" "+n2+" "+n1);
+
+            if (n10 != 3) {
+                System.out.println(n10);
+                c10.quitarVida(n10);
+                n10 += 1;
+            }
+            if (n10 == 3 && n9 != 3) {
+                c9.quitarVida(n9);
+                n9 += 1;
+            }
+            if (n9 == 3 && n8!= 3) {
+                c8.quitarVida(n8);
+                n8 += 1;
+            }
+            if (n8 == 3 && n7!= 3) {
+                c7.quitarVida(n7);
+                n7 += 1;
+            }
+            if (n7 == 3 && n6!= 3) {
+                c6.quitarVida(n6);
+                n6 += 1;
+            }
+            if(n6 == 3 && n5 != 3){
+                c5.quitarVida(n5);
+                n5 += 1;
+            }
+            if (n5 == 3 && n4!= 3) {
+                c4.quitarVida(n4);
+                n4 += 1;
+            }
+            if (n4 == 3 && n3!= 3) {
+                c3.quitarVida(n3);
+                n3 += 1;
+            }
+            if (n3 == 3 && n2!= 3) {
+                c2.quitarVida(n2);
+                n2 += 1;
+            }
+            if (n2 == 3 && n1!= 3) {
+                c1.quitarVida(n1);
+                n1 += 1;
+            }
+        }
     }
+}
