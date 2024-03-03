@@ -44,4 +44,18 @@ public class BarraDeVida extends Label {
         };
         hilo.start();
     }
+    public void curar(int idh){
+        Thread hilo = new Thread(){
+            public void run(){
+                try {
+                    Platform.runLater(()-> setGraphic(vistas[idh]));
+                    System.out.println("num graphic: "+idh);
+                    Thread.sleep(10); // aumentamos el tiempo de la animacion para que pueda verse
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        };
+        hilo.start();
+    }
 }
