@@ -34,7 +34,7 @@ public class Casillas extends Label {
                     try {
                         // para cambiar el numero de imagenes recuerda agrandar las listas vistas y imagenes
                         int aux = (int) Math.round(Math.random() *13); // genera un numero aleatorio del 0 al 13
-                        if(aux == 2) aux = (int) Math.round(Math.random() *13); // si el numero es igual a dos repite la animacion nuevamente
+                        if(aux == 11) aux = (int) Math.round(Math.random() *13); // si el numero es igual a dos repite la animacion nuevamente
 
                         int n = aux;
 
