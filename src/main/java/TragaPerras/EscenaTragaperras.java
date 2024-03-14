@@ -149,6 +149,7 @@ public class EscenaTragaperras extends Scene {
         if(nIzq == nCentro && nIzq == nDer) {
             // tres espadas de diamantes
             if(nIzq == 0) nPremio += nApuesta*5;
+
             // tres creepers
             if(nIzq == 1) {
                 if((nDineroActual - nApuesta * 4) > 0) {
@@ -287,9 +288,12 @@ public class EscenaTragaperras extends Scene {
             }
         }
 
+        // DOS
+
         if(nIzq == nDer && nIzq != nCentro &&nIzq!= 12 && nIzq!= 8 && nIzq!= 9) {
             // dos espadas de diamantes
             if(nIzq == 0) nPremio += nApuesta*3;
+
             // dos creepers
             if(nIzq == 1) {
                 if((nDineroActual - nApuesta * 2) > 0) {
@@ -298,11 +302,22 @@ public class EscenaTragaperras extends Scene {
                     for (int i = 0; i < d; i++) {
                         Damage(d);
                     }
+                    if(nCentro == 11){
+                        nPremio += nApuesta*4;
+                        int e = 4;
+                        for(int i = 0; i < e; i++) {Curar(e);}
+                    }
+                    if(nCentro == 2){
+                        nPremio += nApuesta * 4;
+                        int r = 2;
+                        for(int i = 0; i < r; i++) {Curar(r);}
+                    }
                 }else{
                     nDineroActual = 0;
                     dineroActual.setText(String.valueOf(nDineroActual));
                 }
             }
+
             // dos Manzana de notch
             if(nIzq == 2){
                 nPremio += nApuesta*5; // recuperas vida
@@ -629,12 +644,17 @@ public class EscenaTragaperras extends Scene {
                 dineroActual.setText(String.valueOf(nDineroActual));
             }
         }
+
+        // UNO
+
         // Upgrade
         if(nIzq == 4 && nCentro == 0 && nDer == 7) nPremio += nApuesta*8;
+
         //un pigglin y dos lingotes de oro
         if(nIzq == 8 && nCentro == 9 && nDer == 9
                 || nIzq == 9 && nCentro == 8 && nDer == 9
                 || nIzq == 9 && nCentro == 9 && nDer == 8)nPremio += nApuesta*7;
+
         // dos pigglins y un lingote de oro
         if(nIzq == nCentro && nIzq == 8|| nCentro == nDer && nDer == 8
                 || nIzq == nDer && nIzq== 8) {
@@ -649,10 +669,12 @@ public class EscenaTragaperras extends Scene {
                 dineroActual.setText(String.valueOf(nDineroActual));
             }
         }
+
         // un pigglin y un lingote de oro
         if(nIzq == 8 && nCentro == 9 || nIzq == 9 && nCentro == 8
                 || nCentro == 9 && nDer == 8|| nCentro == 8 && nDer == 9
                 ||nDer == 9 && nIzq == 8|| nDer ==8 && nIzq== 9)nPremio += nApuesta*5;
+
         // un bloque de lava
         if(nIzq == 13 && nIzq != nCentro && nIzq != nDer
                 || nCentro == 13 && nCentro != nIzq && nCentro != nDer
@@ -668,6 +690,7 @@ public class EscenaTragaperras extends Scene {
                 dineroActual.setText(String.valueOf(nDineroActual));
             }
         }
+
         // un totem
         if(nIzq ==11 && nIzq != nCentro && nIzq != nDer
                 || nCentro ==11 && nCentro != nIzq && nCentro != nDer
@@ -676,6 +699,7 @@ public class EscenaTragaperras extends Scene {
             int d = 4;
             for(int i = 0; i < d; i++) {Curar(d);}
         }
+
         // una manzana de notch
         if(nIzq == 2 && nIzq != nCentro && nIzq != nDer
                 || nCentro == 2 && nCentro != nIzq && nCentro != nDer
@@ -684,6 +708,7 @@ public class EscenaTragaperras extends Scene {
             int d = 2;
             for(int i = 0; i < d; i++) {Curar(d);}
         }
+
         // un piglin
         if(nIzq == 8  && nIzq != nCentro && nIzq != nDer
                 || nCentro == 8  && nCentro != nIzq && nCentro != nDer
@@ -699,6 +724,7 @@ public class EscenaTragaperras extends Scene {
                 dineroActual.setText(String.valueOf(nDineroActual));
             }
         }
+
         // un creeper
         if(nIzq == 1 && nIzq != nCentro && nIzq != nDer
                 || nCentro == 1 && nCentro != nIzq && nCentro != nDer
@@ -714,6 +740,7 @@ public class EscenaTragaperras extends Scene {
                 dineroActual.setText(String.valueOf(nDineroActual));
             }
         }
+
         dineroActual.setText(String.valueOf(nDineroActual+nPremio));
         }
 

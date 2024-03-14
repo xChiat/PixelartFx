@@ -18,6 +18,11 @@ module yosolito.pixelartfx {
     opens colorearPixelArt to javafx.graphics;
     opens TragaPerras to javafx.graphics;
     opens ConversorMorse to javafx.graphics;
+    opens VistaLib to javafx.graphics;
+    opens Main to javafx.graphics;
+    opens ModeloLib to javafx.graphics;
+    opens Librosss to javafx.graphics;
+
 
     exports colorearPixelArt;
 }

@@ -5,10 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e55541cf-97ae-44f9-bff0-c6e7c6f8ca9e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/LibrosMVC/Controller/CLib.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/LibrosMVC/Main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/LibrosMVC/ModeloLib/Libro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/LibrosMVC/VistaLib/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/LibrosMVC/VistaLib/Vendedor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/LibrosMVC/VistaLib/VentaInterfaz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Librosss/CompradorView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Librosss/LibreriaApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Librosss/Libro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Librosss/VendedorView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TragaPerras/BarraDeVida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TragaPerras/BarraDeVida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TragaPerras/Casillas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TragaPerras/Casillas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TragaPerras/EscenaTragaperras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TragaPerras/EscenaTragaperras.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +27,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
+        <option value="package-info" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -44,6 +54,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.LibreriaApp.executor&quot;: &quot;Run&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.Principal.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -73,5 +84,16 @@
       <updated>1707163715706</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/TragaPerras/EscenaTragaperras.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
